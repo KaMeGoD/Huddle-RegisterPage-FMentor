@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('./style/normalize.css');
+:root{
+  --FuentePrincipal : 'Poppins', sans-serif;
+  --FuenteSecundaria : 'Open Sans', sans-serif;
+
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+}
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+
+body{
+  background-color: var(--Violet);
+  background-image: url('./images/bg-desktop.svg');
+  background-size:contain;
+  background-position: start;
+  background-position-x: 4rem;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+}
+.header img{
+  width: 20rem;
+}
+.main{
+  margin-top: 13rem;
+  display: flex;
+  gap: 5rem;
+}
+.main-left img{
+  width: 90rem;
+}
+
+h1{
+  color: white;
+  font-family: var(--FuentePrincipal);
+  font-size: 5rem;
+  font-weight: 600;
+}
+p{
+  font-size: 3rem;
+  color: white;
+  font-family: var(--FuenteSecundaria);
+  font-weight: 400;
+}
+
+button{
+  border: none;
+  background-color: white;
+  padding: 1rem 6rem;
+  border-radius: 2rem;
+  font-family: var(--FuenteSecundaria);
+  font-size: 1.5rem;
+  color: var(--Violet);
+  -webkit-box-shadow: 4px 4px 5px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 4px 5px -3px rgba(0,0,0,0.75);
+  box-shadow: 4px 4px 5px -3px rgba(0,0,0,0.75);
+}
+button:hover{
+  background-color: var(--SoftMagenta);
+  color: white;
+  transition: 1000ms;
+}
+footer{
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+}
+footer .fb{
+  background-image: url('./images/logo-fb.svg');
+}
+footer .twiter{
+  background-image: url('./images/logo-twiter.svg');
+}
+footer .insta{
+  background-image: url('./images/logo-instagram.svg');
+}
+
+footer .img{
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1.5rem;
+}
+
+
+footer .fb:hover{
+  background-image: url('./images/logo-fb-activado.svg');
+  border: 1px solid rgb(232, 130, 232);
+  transition: 500ms;
+}
+footer .twiter:hover{
+  background-image: url('./images/logo-twiter-activado.svg');
+  border: 1px solid rgb(232, 130, 232);
+  transition: 500ms;
+}
+footer .insta:hover{
+  background-image: url('./images/logo-insta-activado.svg');
+  border: 1px solid rgb(232, 130, 232);
+  transition: 500ms;
+}
+
+@media only screen and (max-width: 430px) {
+  body{
+    background-image: url('./images/bg-mobile.svg');
+    background-size:contain;
+    background-position: start;
+    background-position-x: 0rem;
+    background-repeat: no-repeat;
+  }
+  .header img{
+    width: 15rem;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+
+  .main-left img{
+    width: 100%;
+  }
+  .main-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  h1{
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  p{
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  button{
+    width: 80%;
+  }
+
+  footer{
+    margin: 3rem auto;
+    display: flex;
+  }
+}
